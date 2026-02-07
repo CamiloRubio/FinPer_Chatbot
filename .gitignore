@@ -1,0 +1,10 @@
+_pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.log
+.DS_Store
+node_modules/
+*.xlsx
+budgets.json
