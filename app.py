@@ -19,6 +19,14 @@ app = Flask(__name__)
 VERIFY_TOKEN = os.getenv("VERIFY_TOKEN")
 
 
+# --- Health check endpoint ---
+
+@app.route("/", methods=["GET"])
+def health_check():
+    """Health check endpoint for Render."""
+    return jsonify({"status": "ok", "service": "FinPer Chatbot"}), 200
+
+
 # --- Webhook endpoints ---
 
 @app.route("/webhook", methods=["GET"])
